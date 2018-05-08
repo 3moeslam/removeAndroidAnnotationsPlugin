@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>com.sparrow.eslam.plugins.android_annotations_remover</id>
+  <name>Android annotations remover</name>
+  <version>0.1</version>
+  <vendor email="islam.ahmed-abdelfattah@vodafone.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Remove android annotations with only one click!.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="removeAnnotationsAction"
+            class="com.sparrow.eslam.plugins.android_annotations_remover.RemoveAnnotationAction"
+            text="Remove Android Anootations"
+            description="By selecting this option you will remove Android Annotations form your activity or class">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift R"/>
+    </action>
+  </actions>
+
+</idea-plugin>
